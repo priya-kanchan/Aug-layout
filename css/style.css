@@ -499,3 +499,82 @@ tr {
     color: #fff;
 }
 
+/* Floor  Plan*/
+.floorplan-section{
+    padding: 100px 0;
+    position: relative;
+}
+.floorplan-section .title{
+    color: #000;
+}
+.floorplan-section .sab-title{
+    color: #000;
+}
+
+
+.floorplan-section .title::before{
+       width: 100px;
+       height: 1px;
+       background-color: #000;
+       content: "";
+       position: absolute;
+       top: 14%;
+       left: 40%;
+       /* mix-blend-mode: difference; */
+}
+.floorplan-section .title::after{
+     width: 100px;
+     height: 1px;
+     background-color: #000;
+     content: "";
+     position: absolute;
+     top: 14%;
+     /* mix-blend-mode: difference; */
+     left: 54%;
+}
+
+
+ul#myTab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 23px;
+  width: 100%;
+  flex-direction: column;
+  height: 550px;
+}
+
+ul#myTab li {
+  background: var(--primary-color);
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  /* padding: 7px 0; */
+}
+
+ul#myTab li button {
+  width: 100%;
+  padding: 12px 0;
+  color: #fff;
+  background: #365e7d;
+  border-radius: 0;
+  border: none;
+  transition: 0.3s ease;
+  border: 1px solid var(--primary-color);
+}
+
+/* Hover state */
+ul#myTab li button:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+/* Active state */
+ul#myTab li .nav-link.active {
+  background-color: #fff;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 0;
+  /* padding: 12px 0; */
+}

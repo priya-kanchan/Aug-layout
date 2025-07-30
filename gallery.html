@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Image Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .gallery-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 50px auto;
+            max-width: 1400px;
+            backdrop-filter: blur(10px);
+            height: auto;
+        }
+
+        .main-image-container {
+            position: relative;
+            height: auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            background: #f8f9fa;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .main-image:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-arrows {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-arrow {
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-arrow:hover {
+            background: white;
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-arrow i {
+            color: #333;
+            font-size: 18px;
+        }
+
+        .thumbnail-container {
+            height: auto;
+            overflow-y: auto;
+            padding: 0 10px;
+        }
+
+        .thumbnail-container::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .thumbnail-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .thumbnail-container::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+
+        .thumbnail-container::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 3px solid transparent;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-color: #007bff;
+        }
+
+        .thumbnail.active {
+            border-color: #007bff;
+            transform: scale(1.05);
+        }
+
+        .image-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .overlay-image {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            animation: zoomIn 0.3s ease;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .close-overlay {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .close-overlay:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+
+        .gallery-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+            font-weight: 300;
+            font-size: 2.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-container {
+                margin: 20px;
+                padding: 20px;
+            }
+            
+            .main-image-container {
+                height: 300px;
+            }
+            
+            .thumbnail-container {
+                height: 200px;
+                margin-top: 20px;
+            }
+            
+            .thumbnail {
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="gallery-container">
+            <h1 class="gallery-title">Modern Gallery</h1>
+            
+            <div class="row">
+                <!-- Left Thumbnails -->
+                <div class="col-lg-2 col-md-3 col-12">
+                    <div class="thumbnail-container" id="leftThumbnails">
+                        <!-- Thumbnails will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Main Image -->
+                <div class="col-lg-8 col-md-6 col-12">
+                    <div class="main-image-container">
+                        <img src="/placeholder.svg?height=500&width=800" 
+                             alt="Main Gallery Image" 
+                             class="main-image" 
+                             id="mainImage">
+                        <div class="nav-arrows">
+                            <button class="nav-arrow" id="prevBtn">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="nav-arrow" id="nextBtn">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Thumbnails -->
+                <div class="col-lg-2 col-md-3 col-12">
+                    <div class="thumbnail-container" id="rightThumbnails">
+                        <!-- Thumbnails will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Overlay -->
+    <div class="image-overlay" id="imageOverlay">
+        <button class="close-overlay" id="closeOverlay">
+            <i class="fas fa-times"></i>
+        </button>
+        <img src="/placeholder.svg" alt="Enlarged Image" class="overlay-image" id="overlayImage">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Gallery images data
+        const galleryImages = [
+            {
+                src: 'https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg',
+                alt: 'Modern Cityscape'
+            },
+            {
+                src: 'https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg',
+                alt: 'Luxury Apartments'
+            },
+            {
+                src: 'https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg',
+                alt: 'Urban Park'
+            },
+            {
+                src: 'https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg',
+                alt: 'Office Buildings'
+            },
+            {
+                src: 'https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg',
+                alt: 'Residential Complex'
+            },
+            {
+                src: 'https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg',
+                alt: 'Night Skyline'
+            },
+            {
+                src: 'https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg',
+                alt: 'Shopping Center'
+            },
+            {
+                src: 'https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg',
+                alt: 'Architecture Detail'
+            },
+            {
+                src: 'https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg',
+                alt: 'Urban Plaza'
+            },
+            {
+                src: 'https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg',
+                alt: 'Modern Bridge'
+            }
+        ];
+
+        let currentImageIndex = 0;
+
+        // DOM elements
+        const mainImage = document.getElementById('mainImage');
+        const leftThumbnails = document.getElementById('leftThumbnails');
+        const rightThumbnails = document.getElementById('rightThumbnails');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const imageOverlay = document.getElementById('imageOverlay');
+        const overlayImage = document.getElementById('overlayImage');
+        const closeOverlay = document.getElementById('closeOverlay');
+
+        // Initialize gallery
+        function initGallery() {
+            // Populate left thumbnails (first half)
+            const leftImages = galleryImages.slice(0, Math.ceil(galleryImages.length / 2));
+            leftImages.forEach((image, index) => {
+                const img = createThumbnail(image, index);
+                leftThumbnails.appendChild(img);
+            });
+
+            // Populate right thumbnails (second half)
+            const rightImages = galleryImages.slice(Math.ceil(galleryImages.length / 2));
+            rightImages.forEach((image, index) => {
+                const img = createThumbnail(image, index + Math.ceil(galleryImages.length / 2));
+                rightThumbnails.appendChild(img);
+            });
+
+            // Set first image as active
+            updateMainImage(0);
+        }
+
+        // Create thumbnail element
+        function createThumbnail(image, index) {
+            const img = document.createElement('img');
+            img.src = image.src;
+            img.alt = image.alt;
+            img.className = 'thumbnail';
+            img.addEventListener('click', () => updateMainImage(index));
+            
+            // Add hover effect for enlargement
+            img.addEventListener('mouseenter', (e) => {
+                e.target.style.transform = 'scale(1.15)';
+                e.target.style.zIndex = '10';
+            });
+            
+            img.addEventListener('mouseleave', (e) => {
+                if (!e.target.classList.contains('active')) {
+                    e.target.style.transform = 'scale(1)';
+                }
+                e.target.style.zIndex = '1';
+            });
+
+            return img;
+        }
+
+        // Update main image
+        function updateMainImage(index) {
+            currentImageIndex = index;
+            mainImage.src = galleryImages[index].src;
+            mainImage.alt = galleryImages[index].alt;
+
+            // Update active thumbnail
+            document.querySelectorAll('.thumbnail').forEach((thumb, i) => {
+                thumb.classList.toggle('active', i === index);
+            });
+        }
+
+        // Navigation functions
+        function showPrevImage() {
+            const prevIndex = currentImageIndex > 0 ? currentImageIndex - 1 : galleryImages.length - 1;
+            updateMainImage(prevIndex);
+        }
+
+        function showNextImage() {
+            const nextIndex = currentImageIndex < galleryImages.length - 1 ? currentImageIndex + 1 : 0;
+            updateMainImage(nextIndex);
+        }
+
+        // Show enlarged image
+        function showEnlargedImage(src) {
+            overlayImage.src = src;
+            imageOverlay.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Hide enlarged image
+        function hideEnlargedImage() {
+            imageOverlay.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Event listeners
+        prevBtn.addEventListener('click', showPrevImage);
+        nextBtn.addEventListener('click', showNextImage);
+        
+        mainImage.addEventListener('click', () => {
+            showEnlargedImage(mainImage.src);
+        });
+
+        closeOverlay.addEventListener('click', hideEnlargedImage);
+        imageOverlay.addEventListener('click', (e) => {
+            if (e.target === imageOverlay) {
+                hideEnlargedImage();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') showPrevImage();
+            if (e.key === 'ArrowRight') showNextImage();
+            if (e.key === 'Escape') hideEnlargedImage();
+        });
+
+        // Initialize gallery on page load
+        document.addEventListener('DOMContentLoaded', initGallery);
+
+        // Auto-play functionality (optional)
+        let autoPlayInterval;
+        
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(showNextImage, 5000);
+        }
+
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+
+        // Start auto-play and pause on hover
+        startAutoPlay();
+        
+        document.querySelector('.gallery-container').addEventListener('mouseenter', stopAutoPlay);
+        document.querySelector('.gallery-container').addEventListener('mouseleave', startAutoPlay);
+    </script>
+</body>
+</html>
