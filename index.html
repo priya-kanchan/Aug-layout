@@ -1,236 +1,482 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
 
-<body>
-
+  <body>
     <header class="header">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid px-5">
-                <!-- Logo Left -->
-                <a class="navbar-brand me-auto" href="#">
-                    <img src="images/icons/logoipsum-380.png" alt="" width="200px">
-                </a>
-                <!-- Search Right -->
-                <div class="d-flex gap-3 ">
-                    <a href="" class="call-btn">+91-9999999999</a>
-                    <button class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                        aria-controls="offcanvasRight">
-                        <!-- <span class="navbar-toggler-icon"></span> -->
-                        <span class="line"></span>
-                        <span class="line"></span>
-                        <span class="line"></span>
-                    </button>
-                </div>
-            </div>
-        </nav>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-            <div class="offcanvas-header">
-                <!-- <h5 id="offcanvasRightLabel">Menu</h5> -->
-                <img src="images/icons/logoipsum-380.png" alt="" class="img-fluid" width="200px">
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Overview</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Highlights</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Price list</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Amenities</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Floor Plan</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Location</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Conatct Us</a>
-                    </li>
-
-                </ul>
-
-            </div>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid px-5">
+          <!-- Logo Left -->
+          <a class="navbar-brand me-auto" href="#">
+            <img src="images/icons/logoipsum-380.png" alt="" width="200px" />
+          </a>
+          <!-- Search Right -->
+          <div class="d-flex gap-3">
+            <a href="" class="call-btn">+91-9999999999</a>
+            <button
+              class="btn"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasRight"
+              aria-controls="offcanvasRight"
+            >
+              <!-- <span class="navbar-toggler-icon"></span> -->
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </button>
+          </div>
         </div>
+      </nav>
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel"
+      >
+        <div class="offcanvas-header">
+          <!-- <h5 id="offcanvasRightLabel">Menu</h5> -->
+          <img
+            src="images/icons/logoipsum-380.png"
+            alt=""
+            class="img-fluid"
+            width="200px"
+          />
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Overview</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Highlights</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Price list</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Amenities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Floor Plan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Location</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Conatct Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
 
     <main>
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="images/banner/banner1.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="images/banner/banner2.jpg" class="d-block w-100" alt="...">
-                </div>
-
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+      <div
+        id="carouselExampleAutoplaying"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="images/banner/banner1.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/banner/banner2.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
         </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </main>
     <div class="banner-heading">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-3">
-                    <div class="location">
-                        <i class="fa-solid fa-location-dot"></i> At Sec-3, Noida
-                    </div>
-                    <h1 class="heading">Project Name</h1>
-
-                </div>
-                <div class="col-9">
-                    <div class="row">
-                        <div class="col-3">
-                            <div class="key-highlight">
-                                <i class="fa-solid fa-house"></i> <span>Total Floor : 3</span>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="key-highlight">
-                                <i class="fa-solid fa-house"></i> <span>Total Floor : 3</span>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="key-highlight">
-                                <i class="fa-solid fa-house"></i> <span>Total Floor : 3</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-3 col-12">
+            <div class="location">
+              <i class="fa-solid fa-location-dot"></i> At Sec-3, Noida
             </div>
+            <h1 class="heading">Project Name</h1>
+          </div>
+          <div class="col-md-9 col-12">
             <div class="row">
-                <div class="col-3">
-                    <span class="typology">2.5, 3 & 4 BHK APARTMENTS</span>
+              <div class="col-md-3 col-4">
+                <div class="key-highlight">
+                  <i class="fa-solid fa-house"></i> <span>Total Floor : 3</span>
                 </div>
-                <div class="col-9">
-                    <div class="price">
-                        <span class="price-amount">₹ 1.25 Lacs*</span>
-                        <span class="price-per-unit">Onwards</span>
-                    </div>
+              </div>
+              <div class="col-md-3 col-4">
+                <div class="key-highlight">
+                  <i class="fa-solid fa-house"></i> <span>Total Floor : 3</span>
                 </div>
+              </div>
+              <div class="col-md-3 col-4">
+                <div class="key-highlight">
+                  <i class="fa-solid fa-house"></i> <span>Total Floor : 3</span>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+        <div class="row">
+          <div class="col-md-3 col-12">
+            <span class="typology">2.5, 3 & 4 BHK APARTMENTS</span>
+          </div>
+          <div class="col-md-9 col-12">
+            <div class="price">
+              <span class="price-amount">₹ 1.25 Lacs*</span>
+              <span class="price-per-unit">Onwards</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-        <section class="overview-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-6">
-                        <h3 class="section-heading">Overview</h3>
-                        <h1 class="second-heading">Line - Building Dreams, Creating Homes: Our Story</h1>
-                    </div>
-                    <div class="col-6">
-                        <div>
-                            <img src="images/overview1.jpg" alt="" class="img-fluid right-img">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6">
-                        <div>
-                            <img src="images/overview2.jpg" alt="" class="img-fluid left-img">
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="paragraph-overview">
-                        <p class="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-                        <button class="btn btns">Download Browser <img src="images/material-symbols_download.png" alt=""></button>
-                        </div>
-                    </div>
-                    
-                </div>
+    <section class="overview-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-12">
+            <h3 class="section-heading">Overview</h3>
+            <h1 class="second-heading">
+              Line - Building Dreams, Creating Homes: Our Story
+            </h1>
+          </div>
+          <div class="col-md-6 col-12 my-3">
+            <div>
+              <img
+                src="images/overview1.jpg"
+                alt=""
+                class="img-fluid right-img"
+              />
             </div>
-        </section>
-
-        <section class="highlight-section">
-            <div class="container">
-                <div class="row ">
-                    <h1 class="title ">Highlight</h1>
-                    <h3 class="sab-title">Showcasing Excellence: Our Highlighted Features</h3>
-
-                    <div class="col-md-6 col-12">
-                        <div>
-                            <img src="images/highlights.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-12">
-                        <div class="highlight-content-box">
-
-                            <div class="highlight-right">
-                                <img src="images/right-arrow.png" alt="" width="25px">Total Floor : 3
-                            </div>
-                            <div class="highlight-right">
-                                <img src="images/right-arrow.png" alt="" width="25px">Total Floor : 3
-                            </div>
-                            <div class="highlight-right">
-                                <img src="images/right-arrow.png" alt="" width="25px">Total Floor : 3
-                            </div>
-                            <div class="highlight-right">
-                                <img src="images/right-arrow.png" alt="" width="25px">Total Floor : 3
-                            </div>
-                            <div class="highlight-right">
-                                <img src="images/right-arrow.png" alt="" width="25px">Total Floor : 3
-                            </div>
-                            <div class="highlight-right">
-                                <img src="images/right-arrow.png" alt="" width="25px">Total Floor : 3
-                            </div>
-                           
-
-                        </div>
-                    </div>
-                </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-12 my-3">
+            <div>
+              <img
+                src="images/overview2.jpg"
+                alt=""
+                class="img-fluid left-img"
+              />
             </div>
+          </div>
+          <div class="col-md-6 col-12">
+            <div class="paragraph-overview">
+              <p class="">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged.
+              </p>
+              <button class="btn btns">
+                Download Browser
+                <img src="images/material-symbols_download.png" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        </section>
+    <section class="highlight-section">
+      <div class="container">
+        <div class="row">
+          <h1 class="title">Highlight</h1>
+          <h3 class="sab-title">
+            Showcasing Excellence: Our Highlighted Features
+          </h3>
 
+          <div class="col-md-6 col-12 mb-3">
+            <div>
+              <img src="images/highlights.jpg" alt="" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-md-6 col-12">
+            <div class="highlight-content-box">
+              <div class="highlight-right">
+                <img src="images/right-arrow.png" alt="" width="25px" />Total
+                Floor : 3
+              </div>
+              <div class="highlight-right">
+                <img src="images/right-arrow.png" alt="" width="25px" />Total
+                Floor : 3
+              </div>
+              <div class="highlight-right">
+                <img src="images/right-arrow.png" alt="" width="25px" />Total
+                Floor : 3
+              </div>
+              <div class="highlight-right">
+                <img src="images/right-arrow.png" alt="" width="25px" />Total
+                Floor : 3
+              </div>
+              <div class="highlight-right">
+                <img src="images/right-arrow.png" alt="" width="25px" />Total
+                Floor : 3
+              </div>
+              <div class="highlight-right">
+                <img src="images/right-arrow.png" alt="" width="25px" />Total
+                Floor : 3
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="Pricelist-section">
+      <div class="container">
+        <div class="row">
+          <h1 class="title">Price List</h1>
+          <h3 class="sab-title">
+            Showcasing Excellence: Our Price List Features
+          </h3>
 
+          <!-- <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Typo</th>
+                <th scope="col">Carpet Area</th>
+                <th scope="col">Price</th>
+                <th scope="col">Enquire Now</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                
+                <td>1 BHK</td>
+                <td>1520 Sq. Ft.</td>
+                <td>2 Cr* Onwards</td>
+                <td>Enquire Now</td>
+              </tr>
+              <tr>
+                <td>1 BHK</td>
+                <td>1520 Sq. Ft.</td>
+                <td>2 Cr* Onwards</td>
+                <td>Enquire Now</td>
+              </tr>
+              <tr>
+                <td>1 BHK</td>
+                <td>1520 Sq. Ft.</td>
+                <td>2 Cr* Onwards</td>
+                <td>Enquire Now</td>
+              </tr>
+            </tbody>
+          </table> -->
 
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th>Typo</th>
+                <th>Carpet Area</th>
+                <th>Price</th>
+                <th><a href="#" class="enquire-btn">Enquire Now</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1 BHK</td>
+                <td>1520 Sq. Ft.</td>
+                <td>2 Cr* Onwards</td>
+                <td><a href="#" class="enquire-btn">Enquire Now</a></td>
+              </tr>
+              <tr>
+                <td>2 BHK</td>
+                <td>1520 Sq. Ft.</td>
+                <td>2 Cr* Onwards</td>
+                <td><a href="#" class="enquire-btn">Enquire Now</a></td>
+              </tr>
+              <tr>
+                <td>3 BHK</td>
+                <td>1520 Sq. Ft.</td>
+                <td>2 Cr* Onwards</td>
+                <td><a href="#" class="enquire-btn">Enquire Now</a></td>
+              </tr>
+              <tr>
+                <td>4 BHK</td>
+                <td>1520 Sq. Ft.</td>
+                <td>2 Cr* Onwards</td>
+                <td><a href="#" class="enquire-btn">Enquire Now</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
 
+    <section class="amenities-section">
+      <div class="container">
+        <div class="row">
+          <h1 class="title">Amenities</h1>
+          <h3 class="sab-title">
+            Showcasing Excellence: Our Amenities Features
+          </h3>
+          <div class="even-number">
+            <div class="row">
+              <div class="col-xl-2 col-md-2 col-sm-4 col-4">
+                <div class="amenities-box">
+                  <div>
+                    <img src="images/amenities/swimming-pool.png" alt="" />
+                  </div>
+                  <p>Swimming Pool</p>
+                </div>
+              </div>
+              <div class="col-xl-2 col-md-2 col-sm-4 col-4">
+                <div class="amenities-box">
+                  <div>
+                    <img src="images/amenities/gym.png" alt="" />
+                  </div>
+                  <p>Gym</p>
+                </div>
+              </div>
+              <div class="col-xl-2 col-md-2 col-sm-4 col-4">
+                <div class="amenities-box">
+                  <div>
+                    <img src="images/amenities/basketball-court.png" alt="" />
+                  </div>
+                  <p>Basketball Court</p>
+                </div>
+              </div>
+              <div class="col-xl-2 col-md-2 col-sm-4 col-4">
+                <div class="amenities-box">
+                  <div>
+                    <img src="images/amenities/table-tennis (1).png" alt="" />
+                  </div>
+                  <p>Table Tennis</p>
+                </div>
+              </div>
+              <div class="col-xl-2 col-md-2 col-sm-4 col-4">
+                <div class="amenities-box">
+                  <div>
+                    <img src="images/amenities/library.png" alt="" />
+                  </div>
+                  <p>Library</p>
+                </div>
+              </div>
+              <div class="col-xl-2 col-md-2 col-sm-4 col-4">
+                <div class="amenities-box">
+                  <div>
+                    <img src="images/amenities/yoga 1.png" alt="" />
+                  </div>
+                  <p>Yoga</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="odd-number mt-4">
+            <div class="row">
+              <div class="col-xl-2 col-md-2 col-sm-4 col-4">
+                <div class="amenities-box">
+                  <div>
+                    <img src="images/amenities/library-1.png" alt="" />
+                  </div>
+                  <p>Library </p>
+                </div>
+              </div>
+              <div class="col-xl-2 col-md-2 col-sm-4 col-4">
+                <div class="amenities-box">
+                  <div>
+                    <img src="images/amenities/sports.png" alt="" />
+                  </div>
+                  <p>Badminton</p>
+                </div>
+              </div>
+              <div class="col-xl-2 col-md-2 col-sm-4 col-4">
+                <div class="amenities-box">
+                  <div>
+                    <img src="images/amenities/play-area.png" alt="" />
+                  </div>
+                  <p>Play Area</p>
+                </div>
+              </div>
+              <div class="col-xl-2 col-md-2 col-sm-4 col-4">
+                <div class="amenities-box">
+                  <div>
+                    <img src="images/amenities/skater.png" alt="" />
+                  </div>
+                  <p>Skater</p>
+                </div>
+              </div>
+              <div class="col-xl-2 col-md-2 col-sm-4 col-4">
+                <div class="amenities-box">
+                  <div>
+                    <img src="images/amenities/table-tennis.png" alt="" />
+                  </div>
+                  <p>Table Tennis</p>
+                </div>
+              </div>
+              <div class="col-xl-2 col-md-2 col-sm-4 col-4">
+                <div class="amenities-box">
+                  <div>
+                    <img src="images/amenities/spa.png" alt="" />
+                  </div>
+                  <p>Spa</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-
-
-
-
-
-
-
-
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/script.js"></script>
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
