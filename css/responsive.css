@@ -81,13 +81,55 @@ span.typology{
      left: 69%;
 }
 
+    .amenities-box {
+        padding: 9px 0;
+        gap: 5px;
+    }
 
 
+.amenities-box p {
+    font-size: 13px;
 
+}
 
+.col-xl-2.col-md-2.col-sm-4.col-4{
+    margin-bottom: 10px;
+}
+.amenities-box img{
+        max-width: 40px;
+       
 
+}
 
+.even-number .row > Div:nth-child(odd) .amenities-box {
+  background-color: transparent;
 
+}
+
+.odd-number .row > Div:nth-child(even) .amenities-box {
+  background-color: #fff;
+
+}
+.odd-number .row > Div:nth-child(even) .amenities-box img{
+ filter: invert(1);
+
+}
+.odd-number .row > Div:nth-child(even) .amenities-box p{
+color: #000;
+
+}
+.odd-number .row > Div:nth-child(odd) .amenities-box {
+    background-color: #f5f5f500;
+}
+.odd-number .row > Div:nth-child(odd) .amenities-box img{
+    filter: invert(1);
+}
+.odd-number .row > Div:nth-child(odd) .amenities-box p{
+    color: #fff;
+}
+/* .amenities-box p{
+    color: #fff;
+} */
 
 thead{
     display: none;
@@ -102,5 +144,8 @@ tr td{
     }
     tr td:first-child{
     font-size: 25px !important;
+}
+.custom-table tbody tr td{
+border-radius: 15px;
 }
 }
