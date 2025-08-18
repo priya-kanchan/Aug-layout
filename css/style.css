@@ -8,6 +8,7 @@
   --white-color: #fff;
   --black-color: #000;
   --light-color: #f1f1f1;
+  --linear-gradient:linear-gradient(135deg, #2f4866, #3f5d7b, #1d334f);
 }
 
 .header {
@@ -115,13 +116,13 @@
 }
 
 .navbar-nav .nav-link:hover {
-  background: linear-gradient(135deg, #2f4866, #3f5d7b, #1d334f);
+  background: var(--linear-gradient);
   color: #00ffff;
   transform: translateX(5px);
 }
 
 .navbar-nav .nav-link.active {
-  background: linear-gradient(135deg, #2f4866, #3f5d7b, #1d334f);
+  background: var(--linear-gradient);
   color: #00ffff;
 }
 
@@ -137,7 +138,7 @@
 
 /* Banner content */
 .banner-heading {
-  background: linear-gradient(135deg, #2f4866, #3f5d7b, #1d334f);
+  background: var(--linear-gradient);
   width: 100%;
   position: absolute;
   bottom: 3%;
@@ -536,6 +537,7 @@ ul#myTab {
   width: 100%;
   flex-direction: column;
   height: 550px;
+      border: none;
 }
 
 ul#myTab li {
@@ -816,7 +818,7 @@ ul#myTab li .nav-link.active {
 .location-box{
   display: flex;
   gap: 11px;
-  background: linear-gradient(135deg, #2f4866, #3f5d7b, #1d334f);
+  background: var(--linear-gradient);
   align-items: center;
   padding: 11px 7px;
   margin-bottom: 15px;
@@ -831,7 +833,7 @@ ul#myTab li .nav-link.active {
 }
 /* footer */
 .developer{
-  background: linear-gradient(135deg, #2f4866, #3f5d7b, #1d334f);
+  background: var(--linear-gradient);
  padding: 100px 0;
   position: relative;
 }
@@ -866,7 +868,7 @@ ul#myTab li .nav-link.active {
 .contact-us{
 box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
    padding: 50px 70px;
-   background: linear-gradient(135deg, #2f4866, #3f5d7b, #1d334f);
+   background: var(--linear-gradient);
    margin-top: 50px;
 }
 .form-control, .form-control:focus {
@@ -892,7 +894,8 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     margin: 0 auto;
     display: block;
     border-radius: 13px;
-    background-color: #2D5577;
+    color: #fff;
+    /* background-color: #2D5577; */
 }
 .form-button .check-out{
    width: 45%;
@@ -901,4 +904,21 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     gap: 15px;
     color: #fff;
     margin-top: 20px;
+}
+footer{
+    background: var(--linear-gradient);
+ padding: 50px 0;
+  position: relative;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+footer p{
+  color: #fff;
+}
+#more {display: none;}
+#myBtn{
+      background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 19px !important;
+    letter-spacing: 2px;
 }

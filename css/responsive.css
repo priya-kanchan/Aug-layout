@@ -148,4 +148,71 @@ tr td{
 .custom-table tbody tr td{
 border-radius: 15px;
 }
+
+.Pricelist-section .title::before {
+    top: 9.5%;
+    left: 10%;
+}
+.Pricelist-section .title::after {
+    top: 9.5%;
+    left: 66%;}
+
+    .floorplan-section .title::before {
+       top: 13%;
+    left: 8%;
+    }
+    .floorplan-section .title::after {
+    top: 13%;
+    /* mix-blend-mode: difference; */
+    left: 69%;
+    }
+    ul#myTab{
+        height: auto;
+    }
+    .tab-content>.tab-pane {
+    margin-top: 22px;
+}
+.location-advantage .title::after {
+    width: 50px;
+    top: 10%;
+    /* mix-blend-mode: difference; */
+    left: 84%;
+}
+.location-advantage .title::before {
+    width: 50px;
+ top: 10%;
+left: 3%;
+    /* mix-blend-mode: difference; */
+}
+.developer .title::before {
+    width: 50px;
+    top: 8%;
+    left: 8%;}
+    .developer .title::after {
+    width: 50px;
+    top: 8%;
+    /* mix-blend-mode: difference; */
+    left: 79%;}
+      .contact-us {
+        padding: 40px 20px;
+        /* margin: 10px; */
+        width: 100%;
+    }
+    .form-control, .form-control:focus{
+        width: 100%;
+    }
+    .form-button button {
+    width: 100%;}
+    .form-button .check-out {
+    width: 100%;}
+    .gallery-section .title::before {
+    top: 13%;
+    left: 12%;}
+    .gallery-section .title::after {
+ top: 13%;
+    left:63%
+}
+.form-control, .form-control:focus, .form-control:active, .btn:hover{
+    color: #fff;
+}
 }
