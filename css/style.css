@@ -26,6 +26,10 @@
   filter: invert(1) brightness(108);
 } */
 
+.header .btn{
+  background-color: var(--primary-color);
+}
+
 .navbar {
   background-color: #20202047 !important;
   border-block: 1px solid #fff;
