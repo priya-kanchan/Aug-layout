@@ -1,3 +1,226 @@
+
+
+
+@media(max-width:1400px){
+    .banner-heading {
+    bottom: 0;}
+
+    .section-heading::after {
+    top: 11%;
+    left: 17%;
+}
+.title::before {
+    top: 16%;
+    left: 37%;
+}
+.title::after {
+    top: 16%;
+    left: 56%;
+}
+.Pricelist-section .title::before {
+    top: 17%;
+    left: 37%;
+}
+.Pricelist-section .title::after {
+    top: 17%;
+    left: 56%;
+}
+.amenities-section .title::before {
+    top: 20%;
+    left: 36%;
+}
+.amenities-section .title::after {
+    top: 20%;
+    left: 56%;
+}
+.amenities-box p {
+    font-size: 15px;
+}
+.floorplan-section .title::before {
+    top: 13.5%;
+    left: 37%;
+}
+
+.floorplan-section .title::after {
+    top: 13.5%;
+    left: 56%;
+}
+.gallery-section .title::before {
+    left: 38%;
+}
+.gallery-section .title::after {
+    top: 14%;
+    left: 55%;
+}
+.location-advantage .title::before {
+    left: 31%;
+}
+.location-advantage .title::after {
+    left: 61%;
+}
+.developer .title::before {
+    top: 12.5%;
+    left: 33%;
+}
+.developer .title::after {
+    top: 12.5%;
+    left: 60%;
+}
+
+
+}
+
+
+@media(max-width:1366px){
+    .banner-heading {
+    bottom: 0;
+    padding: 15px 0;
+}
+span.typology {
+    font-size: 13px;}
+.title::before {
+    top: 17%;
+    left: 37%;
+}
+.title::after {
+    top: 17%;
+    left: 56%;
+}
+
+.Pricelist-section .title::before {
+    top: 17%;
+    left: 36%;
+}
+.Pricelist-section .title::after {
+    top: 17%;
+    left: 56%;
+}
+.amenities-section .title::before {
+    top: 20%;
+    left: 36%;
+}
+.amenities-section .title::after {
+    top: 20%;
+    left: 56%;
+}
+.amenities-box p {
+    font-size: 15px;
+}
+.floorplan-section .title::before {
+    top: 13.5%;
+    left: 36%;
+}
+
+.floorplan-section .title::after {
+    top: 13.5%;
+    left: 56%;
+}
+.gallery-section .title::before {
+    left: 37%;
+}
+.gallery-section .title::after {
+    top: 14%;
+    left: 55%;
+}
+.location-advantage .title::before {
+    left: 31%;
+}
+.location-advantage .title::after {
+    left: 61%;
+}
+.developer .title::before {
+    top: 11.5%;
+    left: 32%;
+}
+.developer .title::after {
+    top: 11.5%;
+    left: 60%;
+}
+
+
+
+
+}
+
+@media(max-width:1280px){
+.banner-heading {
+    bottom: 0;}
+    span.typology {
+    font-size: 13px;}
+.banner-heading {
+    padding: 13px 0;
+}
+    .section-heading::after {
+    top: 12%;
+    left: 20%;
+}
+.title::before {
+    top: 17%;
+    left: 36%;
+}
+.title::after {
+    top: 17%;
+    left: 56%;
+}
+.Pricelist-section .title::before {
+    top: 17%;
+    left: 36%;
+}
+.Pricelist-section .title::after {
+    top: 17%;
+    left: 56%;
+}
+.amenities-section .title::before {
+    top: 20%;
+    left: 36%;
+}
+.amenities-section .title::after {
+    top: 20%;
+    left: 56%;
+}
+.amenities-box p {
+    font-size: 15px;
+}
+.floorplan-section .title::before {
+    top: 13.5%;
+    left: 36%;
+}
+
+.floorplan-section .title::after {
+    top: 13.5%;
+    left: 56%;
+}
+.gallery-section .title::before {
+    left: 37%;
+}
+.gallery-section .title::after {
+    top: 14%;
+    left: 55%;
+}
+.location-advantage .title::before {
+    left: 31%;
+}
+.location-advantage .title::after {
+    left: 61%;
+}
+.developer .title::before {
+    top: 11.5%;
+    left: 32%;
+}
+.developer .title::after {
+    top: 11.5%;
+    left: 60%;
+}
+
+
+
+
+
+}
+
+
+
+
 @media(max-width:967px){
 .navbar>.container-fluid{
   
@@ -144,6 +367,12 @@ tr td{
     }
     tr td:first-child{
     font-size: 25px !important;
+}
+.custom-table tr td:first-child{
+    padding-top: 25px 0;
+}
+.custom-table tr td:last-child {
+    padding-bottom: 25px 0;
 }
 .custom-table tbody tr td{
 border-radius: 15px;

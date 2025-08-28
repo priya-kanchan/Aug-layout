@@ -18,15 +18,16 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="shortcut icon" href="favicon-32x32.png" />
   </head>
 
-  <body>
-    <header class="header">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <body >
+    <header class="header" id="home">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid px-5">
           <!-- Logo Left -->
           <a class="navbar-brand me-auto" href="#">
-            <img src="images/icons/logoipsum-380.png" alt="" width="200px" />
+            <img src="images/logoipsum-custom-logo.svg" alt="" width="200px" />
           </a>
           <!-- Search Right -->
           <div class="d-flex gap-3">
@@ -70,31 +71,31 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Overview</a>
+              <a class="nav-link" href="#overview">Overview</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Highlights</a>
+              <a class="nav-link" href="#highlight">Highlights</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Price list</a>
+              <a class="nav-link" href="#price-list">Price list</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Amenities</a>
+              <a class="nav-link" href="#amenities">Amenities</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Floor Plan</a>
+              <a class="nav-link" href="#floor-plan">Floor Plan</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Gallery</a>
+              <a class="nav-link" href="#gallery">Gallery</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Location</a>
+              <a class="nav-link" href="#location">Location</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Conatct Us</a>
+              <a class="nav-link" href="#contact">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -186,7 +187,7 @@
       </div>
     </div>
 
-    <section class="overview-section">
+    <section class="overview-section" id="overview">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-12">
@@ -235,7 +236,7 @@
       </div>
     </section>
 
-    <section class="highlight-section">
+    <section class="highlight-section" id="highlight">
       <div class="container">
         <div class="row">
           <h1 class="title">Highlight</h1>
@@ -280,7 +281,7 @@
       </div>
     </section>
 
-    <section class="Pricelist-section">
+    <section class="Pricelist-section" id="price-list">
       <div class="container">
         <div class="row">
           <h1 class="title">Price List</h1>
@@ -360,7 +361,7 @@
       </div>
     </section>
 
-    <section class="amenities-section">
+    <section class="amenities-section" id="amenities">
       <div class="container">
         <div class="row">
           <h1 class="title">Amenities</h1>
@@ -475,7 +476,7 @@
       </div>
     </section>
 
-    <section class="floorplan-section">
+    <section class="floorplan-section" id="floor-plan">
       <div class="container">
         <div class="row">
           <h1 class="title">Floor Plan</h1>
@@ -615,7 +616,7 @@
       </div>
     </section>
 
-    <section class="gallery-section">
+    <section class="gallery-section" id="gallery">
       <div class="container">
         <div class="row">
           <h1 class="title">Gallery</h1>
@@ -635,171 +636,199 @@
               style="
                 --optionBackground: url(https://images.pexels.com/photos/8983130/pexels-photo-8983130.jpeg);
               "
-            >
-              
-            </div>
+            ></div>
             <div
               class="option"
               style="
                 --optionBackground: url(https://images.pexels.com/photos/16140814/pexels-photo-16140814.jpeg);
               "
-            >
-              
-            </div>
+            ></div>
             <div
               class="option active"
               style="
                 --optionBackground: url(https://images.pexels.com/photos/9754794/pexels-photo-9754794.jpeg);
               "
-            >
-              
-            </div>
+            ></div>
             <div
               class="option"
               style="
                 --optionBackground: url(https://images.pexels.com/photos/256150/pexels-photo-256150.jpeg);
               "
-            >
-              
-            </div>
+            ></div>
             <div
               class="option"
               style="
                 --optionBackground: url(https://images.pexels.com/photos/32038180/pexels-photo-32038180.jpeg);
               "
-            >
-              
-            </div>
-           
+            ></div>
           </div>
         </div>
       </div>
     </section>
 
-
-<section class="location-advantage">
-  <div class="container">
-    <div class="row">
-      <h1 class="title">Location Advantage</h1>
-          <h3 class="sab-title">Showcasing Excellence: Our Location Features</h3>
+    <section class="location-advantage" id="location">
+      <div class="container">
+        <div class="row">
+          <h1 class="title">Location Advantage</h1>
+          <h3 class="sab-title">
+            Showcasing Excellence: Our Location Features
+          </h3>
           <div class="col-md-6 col-12">
             <div class="location-box">
-              <img src="images/location-icon.png" alt="">
-              <span>
-                Metro Hospital - 5 KM
-              </span>
+              <img src="images/location-icon.png" alt="" />
+              <span> Metro Hospital - 5 KM </span>
             </div>
             <div class="location-box">
-              <img src="images/location-icon.png" alt="">
-              <span>
-                Metro Hospital - 5 KM
-              </span>
+              <img src="images/location-icon.png" alt="" />
+              <span> Metro Hospital - 5 KM </span>
             </div>
             <div class="location-box">
-              <img src="images/location-icon.png" alt="">
-              <span>
-                Metro Hospital - 5 KM
-              </span>
+              <img src="images/location-icon.png" alt="" />
+              <span> Metro Hospital - 5 KM </span>
             </div>
             <div class="location-box">
-              <img src="images/location-icon.png" alt="">
-              <span>
-                Metro Hospital - 5 KM
-              </span>
+              <img src="images/location-icon.png" alt="" />
+              <span> Metro Hospital - 5 KM </span>
             </div>
             <div class="location-box">
-              <img src="images/location-icon.png" alt="">
-              <span>
-                Metro Hospital - 5 KM
-              </span>
+              <img src="images/location-icon.png" alt="" />
+              <span> Metro Hospital - 5 KM </span>
             </div>
             <div class="location-box">
-              <img src="images/location-icon.png" alt="">
-              <span>
-                Metro Hospital - 5 KM
-              </span>
+              <img src="images/location-icon.png" alt="" />
+              <span> Metro Hospital - 5 KM </span>
             </div>
             <div class="location-box">
-              <img src="images/location-icon.png" alt="">
-              <span>
-                Metro Hospital - 5 KM
-              </span>
+              <img src="images/location-icon.png" alt="" />
+              <span> Metro Hospital - 5 KM </span>
             </div>
             <div class="location-box">
-              <img src="images/location-icon.png" alt="">
-              <span>
-                Metro Hospital - 5 KM
-              </span>
+              <img src="images/location-icon.png" alt="" />
+              <span> Metro Hospital - 5 KM </span>
             </div>
-            
-
           </div>
           <div class="col-md-6 col-12">
-            <img src="images/location.jpg" alt="" class="img-fluid">
+            <img src="images/location.jpg" alt="" class="img-fluid" />
           </div>
-    </div>
-  </div>
-
-</section>
-
-
-<section class="developer">
-  <div class="container">
-    <div class="row">
-      <h1 class="title">About Developer</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aspernatur odio ad molestias perferendis, recusandae aliquam sequi dicta iste voluptatum esse consequuntur at quibusdam veniam deserunt dignissimos odit voluptates iusto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est laborum pariatur obcaecati voluptatem repellendus similique omnis eius aperiam officiis ratione ab vel illum accusantium maxime earum, quas accusamus quibusdam tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum doloribus tempore numquam officia obcaecati, repellat magnam maxime adipisci cupiditate veniam, aspernatur possimus odio, enim sunt aliquid libero at ex exercitationem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium deserunt, temporibus vitae, dolores unde tenetur repudiandae, delectus obcaecati nihil laboriosam minima facilis nisi. Praesentium, dicta omnis. Similique non commodi ratione.</p>
-      <div class="contact-us">
-<h1 class="title">Contact Us</h1>
-
-<div class="form-section">
-  <div class="row">
-    <div class="mb-3 col-md-6 col-12">
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name">
-  </div>
-  <div class="mb-3 col-md-6 col-12">
-    <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Enter Email">
-  </div>
-  <div class="mb-3 col-md-6 col-12">
-    <input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Enter Number">
-  </div>
-  <div class="mb-3 col-md-6 col-12">
-    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Message">
-  </div>
-  </div>
-  
-  <div class="form-button">
-    <button type="submit" class="btn ">Submit</button>
-    <div class="check-out">
-       <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</label>
-    </div>
-  </div>
-</div>
-
- 
+        </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-</section>
-<footer>
-  <div class="container">
-    <div class="row">
-    
-      <div>
-        <p class="text-center">Agent Rera: 123456789123 <br>Project Rera: 123456789123</p>
-        <p class="text-center mb-0">Disclaimer: Based on the actual ROI for exited properties in 2024. The value of any investment can decrease, as well as, increase, due to market fluctuations and other external factors.
-          <span id="dots">...</span><span id="more"> Forecasts are only estimates and are not a reliable indicator of performance. There are important risk factors that must be considered before making an investment and all returns are subject to the performance of each individual property.</span>
-        </p>
-        <p class="text-center button"><button onclick="myFunction()" id="myBtn" class="text-center">Read more</button></p>
-          
-        <p class="text-center"><strong>Disclaimer & Privacy Policy</strong> | Copyright ©atskabanahigh 2025. All Rights Reserved | <strong>Crafted By GTF Technologies</strong></p>
-        
+    <section class="developer" id="contact">
+      <div class="container">
+        <div class="row">
+          <h1 class="title">About Developer</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+            aspernatur odio ad molestias perferendis, recusandae aliquam sequi
+            dicta iste voluptatum esse consequuntur at quibusdam veniam deserunt
+            dignissimos odit voluptates iusto. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Est laborum pariatur obcaecati
+            voluptatem repellendus similique omnis eius aperiam officiis ratione
+            ab vel illum accusantium maxime earum, quas accusamus quibusdam
+            tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatum doloribus tempore numquam officia obcaecati, repellat
+            magnam maxime adipisci cupiditate veniam, aspernatur possimus odio,
+            enim sunt aliquid libero at ex exercitationem? Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Accusantium deserunt, temporibus
+            vitae, dolores unde tenetur repudiandae, delectus obcaecati nihil
+            laboriosam minima facilis nisi. Praesentium, dicta omnis. Similique
+            non commodi ratione.
+          </p>
+          <div class="contact-us">
+            <h1 class="title">Contact Us</h1>
+
+            <div class="form-section">
+              <div class="row">
+                <div class="mb-3 col-md-6 col-12">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter Name"
+                  />
+                </div>
+                <div class="mb-3 col-md-6 col-12">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                    placeholder="Enter Email"
+                  />
+                </div>
+                <div class="mb-3 col-md-6 col-12">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                    placeholder="Enter Number"
+                  />
+                </div>
+                <div class="mb-3 col-md-6 col-12">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                    placeholder="Enter Message"
+                  />
+                </div>
+              </div>
+
+              <div class="form-button">
+                <button type="submit" class="btn">Submit</button>
+                <div class="check-out">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="exampleCheck1"
+                  />
+                  <label class="form-check-label" for="exampleCheck1"
+                    >Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div>
+            <p class="text-center">
+              Agent Rera: 123456789123 <br />Project Rera: 123456789123
+            </p>
+            <p class="text-center mb-0">
+              Disclaimer: Based on the actual ROI for exited properties in 2024.
+              The value of any investment can decrease, as well as, increase,
+              due to market fluctuations and other external factors.
+              <span id="dots">...</span
+              ><span id="more">
+                Forecasts are only estimates and are not a reliable indicator of
+                performance. There are important risk factors that must be
+                considered before making an investment and all returns are
+                subject to the performance of each individual property.</span
+              >
+            </p>
+            <p class="text-center button">
+              <button onclick="myFunction()" id="myBtn" class="text-center">
+                Read more
+              </button>
+            </p>
 
+            <p class="text-center">
+              <strong>Disclaimer & Privacy Policy</strong> | Copyright
+              ©atskabanahigh 2025. All Rights Reserved |
+              <strong>Crafted By GTF Technologies</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
@@ -855,20 +884,46 @@ window.addEventListener('resize', alternateBoxColors);
     </script>
     <script>
       function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
 
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more"; 
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less"; 
-    moreText.style.display = "inline";
-  }
-}
+        if (dots.style.display === "none") {
+          dots.style.display = "inline";
+          btnText.innerHTML = "Read more";
+          moreText.style.display = "none";
+        } else {
+          dots.style.display = "none";
+          btnText.innerHTML = "Read less";
+          moreText.style.display = "inline";
+        }
+      }
+
+      document.getElementById("exampleCheck1").checked = true;
+    </script>
+
+    <!-- menu bar -->
+    <script>
+      document.querySelectorAll(".offcanvas a").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault(); // stop default jump
+
+          // close offcanvas
+          let offcanvasEl = document.querySelector(".offcanvas");
+          let offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+          offcanvas.hide();
+
+          // scroll to target section
+          const targetId = this.getAttribute("href");
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            targetEl.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
     </script>
   </body>
 </html>
